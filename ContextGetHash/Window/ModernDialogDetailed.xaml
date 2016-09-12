@@ -1,0 +1,30 @@
+﻿<mui:ModernDialog
+    x:Class="ContextGetHash.Window.ModernDialogDetailed"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:ContextGetHash.Window"
+    xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+    mc:Ignorable="d"
+    
+    Title="Message Title"
+    WindowStyle="ToolWindow"
+    ResizeMode="NoResize"
+    ShowInTaskbar="False"
+    Topmost="True"
+    WindowStartupLocation="CenterOwner">
+    <Grid x:Name="Grid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock x:Name="textBlockMessage" Grid.Row="0" Margin="0,10" TextWrapping="NoWrap" Text="Message"/>
+        <CheckBox Grid.Row="1" Margin="0,10" Content="show details" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked" VerticalAlignment="Top" HorizontalAlignment="Left" BorderBrush="#FF007ACC"/>
+        <TextBox x:Name="textBoxExtendedMessage" Grid.Row="2" Margin="0" TextWrapping="NoWrap" Text="ExtendedMessage" Visibility="Hidden" MinWidth="250" MaxHeight="600" MaxWidth="600" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Focusable="False"/>
+        <Button x:Name="buttonCopy" Grid.Row="3" Margin="0,10" Content="Copy to Clipboard" Visibility="Hidden" HorizontalAlignment="Left" VerticalAlignment="Top" BorderBrush="#FF007ACC" Click="buttonCopy_Click"/>
+    </Grid>
+</mui:ModernDialog>

@@ -1,0 +1,34 @@
+﻿<mui:ModernWindow 
+    x:Class="Main"
+    x:Name="MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+    
+    Title="Multitool"
+    ContentSource="/Window/Cryptography/Hash.xaml"
+    TextElement.FontSize="11"
+    WindowStartupLocation="CenterScreen"
+    BorderBrush="#252526"
+    AllowDrop="True"
+    MinHeight="323"
+    MinWidth="531">
+
+    <mui:ModernWindow.MenuLinkGroups>
+        <mui:LinkGroup DisplayName="Cryptography" >
+            <mui:LinkGroup.Links>
+                <mui:Link DisplayName="Hash" Source="/Window/Cryptography/Hash.xaml"/>
+            </mui:LinkGroup.Links>
+        </mui:LinkGroup>
+
+        <mui:LinkGroup DisplayName="String Tools" >
+            <mui:LinkGroup.Links>
+            </mui:LinkGroup.Links>
+        </mui:LinkGroup>
+
+        <mui:LinkGroup DisplayName="Time &amp; Date" >
+            <mui:LinkGroup.Links>
+            </mui:LinkGroup.Links>
+        </mui:LinkGroup>
+    </mui:ModernWindow.MenuLinkGroups>
+</mui:ModernWindow>

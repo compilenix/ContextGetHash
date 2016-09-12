@@ -1,0 +1,29 @@
+﻿<mui:ModernWindow
+    x:Class="ModernDialogExtended"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+    
+    Title="Message Title"
+    WindowStyle="ToolWindow"
+    ResizeMode="NoResize"
+    ShowInTaskbar="False"
+    Topmost="True"
+    WindowStartupLocation="CenterOwner">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="43"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock x:Name="textBlockMessage" Grid.Row="0" Grid.Column="0" Margin="10" TextWrapping="NoWrap" Text="Message" VerticalAlignment="Top"/>
+        <CheckBox Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10" Content="show details" FontSize="9" />
+        <TextBox x:Name="textBoxExtendedMessage" Grid.Row="1" Grid.Column="0" Margin="10" TextWrapping="NoWrap" Text="ExtendedMessage" Visibility="Hidden"/>
+        <Button x:Name="buttonOK"  Grid.Row="2" Grid.Column="0" Margin="10" Content="OK" IsDefault="True" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="80" />
+    </Grid>
+</mui:ModernWindow>

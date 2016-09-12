@@ -1,0 +1,59 @@
+﻿<Page x:Class="ContextGetHash.Window.Cryptography.Hash"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ContextGetHash.Window.Cryptography"
+      mc:Ignorable="d"
+      d:DesignWidth="459"
+      Title="Hash">
+
+    <Grid x:Name="Grid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="43"/>
+            <RowDefinition Height="43"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="43"/>
+            <RowDefinition Height="0"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBox x:Name="TextBoxFileInput" Grid.Row="0" Grid.Column="0" Margin="10" Foreground="White" BorderBrush="#FF007ACC" SelectionBrush="#FF007ACC" IsEnabled="False"/>
+        <Button x:Name="ButtonOpenFile" Grid.Row="0" Grid.Column="1" Content="..." Margin="10" BorderBrush="#FF007ACC" Foreground="White" Click="ButtonOpenFile_Click" Drop="TextBoxFileInput_Drop" Width="80"/>
+
+        <ComboBox x:Name="comboBoxHashSet" HorizontalAlignment="Left" Height="23" Margin="10" Grid.Row="1" VerticalAlignment="Top" Width="150" SelectionChanged="comboBoxHashSet_SelectionChanged" IsReadOnly="True" IsTextSearchEnabled="True">
+            <ComboBoxItem Content="All"/>
+            <ComboBoxItem Content="AllUnique"/>
+            <ComboBoxItem Content="Checksums"/>
+            <ComboBoxItem Content="CryptoAll"/>
+            <ComboBoxItem Content="CryptoBuildIn"/>
+            <ComboBoxItem Content="CryptoNotBuildIn"/>
+            <ComboBoxItem Content="FastComputes"/>
+            <ComboBoxItem Content="Hash32"/>
+            <ComboBoxItem Content="Hash64"/>
+            <ComboBoxItem Content="HMACCryptoBuildIn"/>
+            <ComboBoxItem Content="NonBlock"/>
+        </ComboBox>
+        <ComboBox x:Name="comboBoxHashes" HorizontalAlignment="Right" Height="23" Margin="10" Grid.Row="1" VerticalAlignment="Top" Width="200" SelectionChanged="comboBoxHashes_SelectionChanged" IsReadOnly="True" IsTextSearchEnabled="True">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Path=Name}"/>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        <Button x:Name="ButtonGoFile" Grid.Row="1" Grid.Column="1" Content="GO" Margin="10" BorderBrush="#FF007ACC" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" Click="ButtonGoFile_Click" Width="80"/>
+
+        <TextBox x:Name="TextBoxInput" Grid.Row="2" Grid.Column="0" Margin="10" Foreground="White" BorderBrush="#FF007ACC" SelectionBrush="#FF007ACC" AcceptsTab="True" AcceptsReturn="True" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto"/>
+        <TextBox x:Name="TextBoxNumeric" Grid.Row="2" Grid.Column="1" Text="1" Margin="10" BorderBrush="#FF007ACC" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="White" TextAlignment="Right" LostFocus="TextBoxNumeric_LostFocus" Width="80"/>
+        <Button x:Name="ButtonGoText" Grid.Row="2" Grid.Column="1" Content="GO" Margin="10" BorderBrush="#FF007ACC" HorizontalAlignment="Center" VerticalAlignment="Bottom" Foreground="White" Click="ButtonGoText_Click" Width="80"/>
+
+        <TextBox x:Name="TextBoxTextResult" Grid.Row="3" Grid.Column="0" Text="Result" Margin="10" IsReadOnly="True" Background="#FFA0A0A0" Foreground="Black" BorderBrush="#FF007ACC" SelectionBrush="#FF007ACC"/>
+        <Button x:Name="ButtonCancel" Content="Cancel" Grid.Row="3" Grid.Column="1" Margin="10" BorderBrush="#FF007ACC" HorizontalAlignment="Center" VerticalAlignment="Bottom" Foreground="DarkGray" Click="ButtonCancel_Click" IsEnabled="False" Width="80"/>
+
+        <ProgressBar x:Name="ProgressBar" Margin="10" Grid.Row="4" Grid.Column="0" Visibility="Hidden"/>
+        <TextBlock x:Name="TextBlockProgress" Margin="10" Grid.Row="4" Grid.Column="1" Visibility="Hidden" Text="" Width="80"/>
+    </Grid>
+</Page>
