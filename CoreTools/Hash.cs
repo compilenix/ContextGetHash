@@ -10,7 +10,7 @@ namespace CoreTools {
         public delegate byte[] CalculateDelegateBytes(byte[] Input, IHash Algorithm);
         public delegate byte[] CalculateDelegateFile(FileStream Stream, IHash Algorithm);
 
-        public IHash HashAlgorithm { get; set; } = DefaultHashAlgorithm;
+        public IHash HashAlgorithm { get; set; }
 
         public byte[] Calculate(byte[] Input, IHash Algorithm) {
             return Algorithm.ComputeBytes(Input).GetBytes();

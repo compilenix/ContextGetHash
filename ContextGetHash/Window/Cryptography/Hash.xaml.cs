@@ -342,5 +342,10 @@ namespace ContextGetHash.Window.Cryptography {
                 }
             }
         }
+
+        private void Page_Drop(object sender, DragEventArgs e)
+        {
+            this.TextBoxFileInput_Drop(sender, e);
+        }
     }
 }

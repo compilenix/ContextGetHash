@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:ContextGetHash.Window.Cryptography"
       mc:Ignorable="d"
       d:DesignWidth="459"
-      Title="Hash">
+      Title="Hash" Drop="Page_Drop" Background="Transparent">
 
     <Grid x:Name="Grid">
         <Grid.RowDefinitions>
@@ -46,7 +46,7 @@
         </ComboBox>
         <Button x:Name="ButtonGoFile" Grid.Row="1" Grid.Column="1" Content="GO" Margin="10" BorderBrush="#FF007ACC" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" Click="ButtonGoFile_Click" Width="80"/>
 
-        <TextBox x:Name="TextBoxInput" Grid.Row="2" Grid.Column="0" Margin="10" Foreground="White" BorderBrush="#FF007ACC" SelectionBrush="#FF007ACC" AcceptsTab="True" AcceptsReturn="True" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto"/>
+        <TextBox x:Name="TextBoxInput" Grid.Row="2" Grid.Column="0" Margin="10" Foreground="White" BorderBrush="#FF007ACC" SelectionBrush="#FF007ACC" AcceptsTab="True" AcceptsReturn="True" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Drop="Page_Drop"/>
         <TextBox x:Name="TextBoxNumeric" Grid.Row="2" Grid.Column="1" Text="1" Margin="10" BorderBrush="#FF007ACC" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="White" TextAlignment="Right" LostFocus="TextBoxNumeric_LostFocus" Width="80"/>
         <Button x:Name="ButtonGoText" Grid.Row="2" Grid.Column="1" Content="GO" Margin="10" BorderBrush="#FF007ACC" HorizontalAlignment="Center" VerticalAlignment="Bottom" Foreground="White" Click="ButtonGoText_Click" Width="80"/>
 
